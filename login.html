@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,39 +8,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="./src/images/Logo.svg" rel="icon" />
+    <title>AluraGeek - Login </title>
     <link rel="stylesheet" href="./src/styles/reset.css"/>
     <link rel="stylesheet" href="./src/styles/header/header.css"/>
-    <link rel="stylesheet" href="./src/styles/home/section.css"/>
-    <link rel="stylesheet" href="./src/styles/main/main.css"/>
     <link rel="stylesheet" href="./src/styles/footer/footer.css"/>
-    <title>AluraGeek</title>
-
+    <link rel="stylesheet" href="./src/styles/sectionLogin/login.css"/>
 </head>
-
 <body>
+
     <header class="header">
-    <a href="index.html">
-        <img class="header__img" src="./src/images/Logo.svg" alt="logotipo alurageek">
-    </a> 
+    
+        <a href="index.html">
+            <img class="header__img" src="./src/images/Logo.svg" alt="logotipo alurageek">
+        </a> 
         <div class="header__search">
             <input type="search" />
             <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14"><g><circle cx="5.92" cy="5.92" r="5.42" fill="none" stroke="#464646" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="13.5" y1="13.5" x2="9.75" y2="9.75" fill="none" stroke="#464646" stroke-linecap="round" stroke-linejoin="round"></line></g>
             </svg>
         </div>
-
-        <a class="header__button" href="login.html">Login</a>
     </header>
 
-    <section class="home__banner">
-        <div>
-        <h1>Dezembro promocional</h1>
-        <span>Produtos selecionados com 33% de desconto</span>
-        <a href="#">Ver Consoles</a>
-        </div>
+    <section>
+        <form class="login__form">
+            <h3>Iniciar sessão</h3> 
+            <input type="email" class="input__text" placeholder="Escreva seu email"/>
+            <input type="password" class="input__password" placeholder="Escreva sua senha"/>
+            <button>Entrar</button>
+        </form>
     </section>
-
-    <main>
-    </main>
 
     <footer>
         <div class="footer">
@@ -75,8 +69,6 @@
             Desenvolvido por Maicon Nunes 2023
         </div>
     </footer>
-
-<script src="./src/scripts/script.js" type="module"></script>
+    
 </body>
-
 </html>

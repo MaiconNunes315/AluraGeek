@@ -3,6 +3,8 @@ import { cardProductComponent } from "./components/main.js";
 
 
 (() => {
+
+
     const main = document.querySelector("main");
     
     main.appendChild(sectionComponent("Star Wars"));
@@ -32,6 +34,7 @@ import { cardProductComponent } from "./components/main.js";
     cardProductComponent( productsCard[2],  "diversos4", "Produto XYZ", "60,00")
     cardProductComponent( productsCard[2], "diversos5", "Produto XYZ", "60,00")
     cardProductComponent(productsCard[2], "diversos6", "Produto XYZ", "60,00")
+
 
   
 })()
