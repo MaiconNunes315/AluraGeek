@@ -1,5 +1,6 @@
 import { sectionComponent } from "./components/main.js";
 import { cardProductComponent } from "./components/main.js";
+import { handleInputSearch } from "./handleInputSearch.js";
 
 
 (() => {
@@ -35,6 +36,6 @@ import { cardProductComponent } from "./components/main.js";
     cardProductComponent( productsCard[2], "diversos5", "Produto XYZ", "60,00")
     cardProductComponent(productsCard[2], "diversos6", "Produto XYZ", "60,00")
 
-
+handleInputSearch()
   
 })()
