@@ -70,7 +70,7 @@ footer{
     color: #A2A2A2;
 }
 
-textarea{
+.footer__form textarea{
     resize: none;
     height: 82px;
 }
