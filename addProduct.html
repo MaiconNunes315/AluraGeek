@@ -15,7 +15,7 @@
     <title>Adicionar produtos - AluraGeek</title>
 </head>
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <a href="index.html">
             <img class="header__img" src="./src/images/Logo.svg" alt="logotipo alurageek">
         </a> 
@@ -26,10 +26,10 @@
             </div>
     
             <a class="header__button" href="login.html">Login</a>
-        </header>
+        </header> -->
 
     <section class="addProduct">
-        <form class="addProduct__container">
+        <form class="addProduct__container" method="post">
             <h3>Adicionar novo produto</h3>
 
             <div class="addProduct__form">
@@ -48,12 +48,13 @@
                 <label for="price">Preço do produto</label>
                 <input type="text" id="price"/>
             </div>
+
             <div class="addProduct__form">
                 <label for="description">Descrição do produto</label>
-                <input id="lastChildInput" type="text" id="description"/>
+                <input type="text" id="description" class=" lastChildInput"/>
             </div>
 
-            <button>Adicionar produto</button>
+            <button id="buttonAddProduct" type="submit">Adicionar produto</button>
 
         </form>
 
@@ -62,7 +63,7 @@
 
 
 
-        <footer>
+        <!-- <footer>
             <div class="footer">
                 <div class="footer__imgContainer">
                     <img src="./src/images/Logo.svg" alt="logotipo alurageek">
@@ -93,7 +94,7 @@
             <div class="footer__author">
                 Desenvolvido por Maicon Nunes 2023
             </div>
-        </footer>
-    
+        </footer> -->
+        <script src="./src/scripts/script.js" type="module"></script>
 </body>
 </html>

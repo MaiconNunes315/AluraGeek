@@ -1,11 +1,18 @@
+import { footer } from "./components/footer.js";
+import { header } from "./components/header.js";
 import { sectionComponent } from "./components/main.js";
 import { cardProductComponent } from "./components/main.js";
+import { productController } from "./controller/controller.js";
+
 import { handleInputSearch } from "./handleInputSearch.js";
 
 
-(() => {
 
+(async () => {
 
+    console.log(location.pathname)
+    
+    if (location.pathname === "/index.html") {
     const main = document.querySelector("main");
     
     main.appendChild(sectionComponent("Star Wars"));
@@ -36,6 +43,17 @@ import { handleInputSearch } from "./handleInputSearch.js";
     cardProductComponent( productsCard[2], "diversos5", "Produto XYZ", "60,00")
     cardProductComponent(productsCard[2], "diversos6", "Produto XYZ", "60,00")
 
-handleInputSearch()
-  
+    }
+    
+        const body = document.querySelector("body");
+        body.insertBefore(header(), document.querySelector("section"))
+        body.appendChild(footer());
+    if (location.pathname == "/addProduct.html") {
+        productController()
+    }    
+    
+    
+    
+    handleInputSearch()
+
 })()

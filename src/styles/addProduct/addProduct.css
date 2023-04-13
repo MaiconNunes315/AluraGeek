@@ -41,7 +41,7 @@ padding: 32px;
     
 }
 
-#lastChildInput{
+.lastChildInput{
     height: 68px;
     padding-top: 0;
 }
