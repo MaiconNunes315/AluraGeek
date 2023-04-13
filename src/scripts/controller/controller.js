@@ -21,6 +21,7 @@ export async function productController() {
                 price: price,
                 description:description
             }
+            
             await postProduct(post)
         })
     }

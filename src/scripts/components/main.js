@@ -13,7 +13,7 @@ export function sectionComponent(title) {
     productsInfo.appendChild(h2);
 
     const allProducts = document.createElement("a");
-    allProducts.setAttribute("href", "products.html");
+    allProducts.setAttribute("href", "#");
     allProducts.innerText = "Ver tudo";
     productsInfo.appendChild(allProducts);
 
@@ -39,7 +39,7 @@ export function cardProductComponent(insertCards, img, title, price) {
     insertCards.appendChild(productsCard);
 
     const imgProduct = document.createElement("img");
-    imgProduct.setAttribute("src", `./src/images/${img}.png`);
+    imgProduct.setAttribute("src", img);
     imgProduct.setAttribute("alt", "Imagem do produto");
     productsCard.appendChild(imgProduct);
 

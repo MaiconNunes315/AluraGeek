@@ -1,5 +1,69 @@
 {
   "Star-Wars": [
-    
+    {
+      "img": "https://github.com/MaiconNunes315/AluraGeek/blob/main/src/images/star1.png?raw=true",
+      "category": "Star-Wars",
+      "name": "Caneca 3D Stormtrooper Ceramica Star Wars",
+      "price": "60,00",
+      "description": "Caneca 3D Capacete Stormtrooper Star Wars Produto Oficial  Linda caneca de ceramica no formato do divertido Stormtrooper para voce dar de presente ou presentear a si mesmo. Agora voce pode ter uma caneca totalmente diferente para decorar seu ambiente, com espessura otima para garantir resistencia e conforto para tomar sua bebida preferida!   Produto oficial e licenciado Star Wars.  Medidas aproximadas  Altura: 11cm Comprimento: 17 cm Largura: 17 cm Diametro: 11 cm  Capacidade: 500ml Material: Ceramica Peso: 450g",
+      "id": 1
+    },
+    {
+      "img": "https://github.com/MaiconNunes315/AluraGeek/blob/main/src/images/star2.png?raw=true",
+      "category": "Star-Wars",
+      "name": "Fantasia masculina Star Wars Kylo Ren",
+      "price": "120,00",
+      "description": "Material da fantasia: poliéster (túnica externa + cachecol) + tecido Oxford (túnica interna) + poliuretano (cinto + luvas) Material: PVC, não gosta de plástico barato, mais durável e não tem cheiro de plástico.",
+      "id": 2
+    },
+    {
+      "img": "https://github.com/MaiconNunes315/AluraGeek/blob/main/src/images/star3.png?raw=true",
+      "category": "Star-Wars",
+      "name": "Produto XYZ",
+      "price": "60,00",
+      "description": "Sem descrição",
+      "id": 3
+    },
+    {
+      "img": "https://github.com/MaiconNunes315/AluraGeek/blob/main/src/images/star4.png?raw=true",
+      "category": "Star-Wars",
+      "name": "Lego Star Wars ",
+      "price": "700,00",
+      "description": "Coleção: Lego Material do brinquedo: Plástico Idade mínima recomendada: 18 anos É magnético: Não",
+      "id": 4
+    },
+    {
+      "img": "https://github.com/MaiconNunes315/AluraGeek/blob/main/src/images/star5.png?raw=true",
+      "category": "Star-Wars",
+      "name": "Wallpaper Yoda",
+      "price": "10,00",
+      "description": "Sem descrição",
+      "id": 5
+    },
+    {
+      "img": "https://github.com/MaiconNunes315/AluraGeek/blob/main/src/images/star6.png?raw=true",
+      "category": "Star-Wars",
+      "name": "Boneco Yoda Baby Star Wars Para Decoração",
+      "price": "100,00",
+      "description": "Nome do produto: Yoda baby boneca Material do produto: PVC/latex/pano Especificação: 28*20*15CM (medição normal terá erros)",
+      "id": 6
+    }
+  ],
+  "Console": [
+    {
+      "img": "https://github.com/MaiconNunes315/AluraGeek/blob/main/src/images/consoles1.png?raw=true",
+      "category": "Console",
+      "name": "Gameboy Classic Transparente",
+      "price": "700,00",
+      "description": "É um console portátil desenvolvido pela Nintendo, lançado em 21 de abril de 1989 no Japão, em 31 de julho de 1989 na América do Norte e em 28 de setembro de 1990 na Europa, é o primeiro console da linha Game Boy, foi criado por Gunpei Yokoi e pela Nintendo Research & Development 1, versões redesenhadas do console foram lançadas em 1996 e em 1998, o Game Boy Pocket e o Game Boy Light (somente para o Japão) ",
+      "id": 1
+    }
+  ],
+  "Diversos":[
+  ],
+  "categories": [
+    "Star Wars",
+    "Console",
+    "Diversos"
   ]
 }

@@ -1,8 +1,19 @@
+export async function getCategories() {
+    const getData = await fetch(`http://localhost:3000/categories`);
+    return getData.json();
+}
+
+
+export async function getProduct(category) {
+
+    if (category.includes(" ")) {
+        category = category.replace(" ", "-")
+    }
+
+    const getData = await fetch(`http://localhost:3000/${category}`);
 
 
 
-export async function productService() {
-    const getData = await fetch('http://localhost:3000/produtos');
     return getData.json() 
 }
 
