@@ -25,25 +25,35 @@ import { getCategories, getProduct } from "./services/service.js";
         
     
 
-        const products = {
-            star: await getProduct("Star Wars"),
-            consoles: await getProduct("Console"),
-            divers: await getProduct("Diversos")
-        }     
-
+        // const products = {
+        //     star: getProduct("Star Wars"),
+        //     consoles: getProduct("Console"),
+        //     divers: getProduct("Diversos")
+        // }     
+        
         const sectionProduct = document.querySelectorAll(".products");
 
-        products.star.map(card => {
-            cardProductComponent(sectionProduct[0].lastChild, card.img, card.name, card.price)
+        getProduct()["Star-Wars"].map(card => {
+                cardProductComponent(sectionProduct[0].lastChild, card.img, card.name, card.price)
         })
-
-        products.consoles.map(card => {
+        getProduct()["Console"].map(card => {
             cardProductComponent(sectionProduct[1].lastChild, card.img, card.name, card.price)
         })
-
-        products.divers.map(card => {
+        getProduct()["Diversos"].map(card => {
             cardProductComponent(sectionProduct[2].lastChild, card.img, card.name, card.price)
         })
+
+        // products.star.map(card => {
+        //     cardProductComponent(sectionProduct[0].lastChild, card.img, card.name, card.price)
+        // })
+
+        // products.consoles.map(card => {
+        //     cardProductComponent(sectionProduct[1].lastChild, card.img, card.name, card.price)
+        // })
+
+        // products.divers.map(card => {
+        //     cardProductComponent(sectionProduct[2].lastChild, card.img, card.name, card.price)
+        // })
         
     }
 
