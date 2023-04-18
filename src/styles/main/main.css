@@ -1,10 +1,10 @@
-main{
+main {
     background-color: #E5E5E5;
     padding: 16px 0;
 
 }
 
-.products{
+.products {
     display: flex;
     margin: auto;
     gap: 16px;
@@ -14,20 +14,20 @@ main{
     gap: 16px;
 }
 
-.products__info{
+.products__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.products__info h2{
+.products__info h2 {
     font-size: 22px;
     font-weight: 700;
     color: #464646;
 }
 
-.products__info a{
+.products__info a {
     display: flex;
     align-items: center;
     gap: 4px;
@@ -37,33 +37,40 @@ main{
     font-weight: 700;
 }
 
-.products__info a svg{
+.products__info a svg {
     width: 16px;
 }
 
-.products__cards{
+.products__cards {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     justify-content: center;
     max-height: 492px;
-    overflow: hidden;
+
 }
 
 
-.products__card{
+.products__card {
     display: flex;
     flex-direction: column;
     gap: 8px;
     width: 156px;
+    cursor: pointer;
 }
 
-.products__card img{
+.products__card:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.493);
+    transform: scale(1.1, 1.1);
+    border-radius: 5px;
+}
+
+.products__card img {
     width: 100%;
     height: 170px;
 }
 
-.products__card h3{
+.products__card h3 {
     font-size: 14px;
     font-weight: 500;
     color: #464646;
@@ -73,58 +80,58 @@ main{
     width: 100%;
 }
 
-.products__card span{
+.products__card span {
     font-weight: 700;
     color: #464646;
 
 }
 
-.products__card a{
+.products__card a {
     text-decoration: none;
     color: #2A7AE4;
     font-size: 14px;
     font-weight: 700;
-    
+
 }
 
 @media screen and (min-width:768px) {
-    .products{
+    .products {
         height: auto;
         padding: 32px;
     }
 
-    .products__info a{
-    gap:8px;
-    font-size: 16px;
+    .products__info a {
+        gap: 8px;
+        font-size: 16px;
     }
-    
-    .products__cards{
+
+    .products__cards {
         max-height: 246px;
         justify-content: flex-start;
     }
 
-    .products__card{
+    .products__card {
         width: 176px;
     }
 
-    .products__card a{
-        font-size: 16px;       
+    .products__card a {
+        font-size: 16px;
     }
 }
 
 @media screen and (min-width:1440px) {
-    .products{
+    .products {
         gap: 16px;
     }
 
-    .products__info h2{
+    .products__info h2 {
         font-size: 32px;
-        
+
     }
 
-    .products__card:nth-last-child(-n+2){
+    .products__card:nth-last-child(-n+2) {
         display: flex;
-     }
+    }
 
-  
+
 }
