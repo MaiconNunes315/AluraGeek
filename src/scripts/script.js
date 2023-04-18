@@ -10,7 +10,7 @@ import { getCategories, getProduct } from "./services/service.js";
 
 (async () => {
     //será renderizado apenas no arquivo index
-    if (location.pathname === "/index.html") {
+    if (location.pathname === "/index.html" || location.pathname === "AluraGeek/index.html" ) {
         //buscando a tag html principal da pagina
         const main = document.querySelector("main");
         //recebendo os valores das categorias dos produtos e declarando em uma variável 
