@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./src/styles/footer/footer.css"/>
     <link rel="stylesheet" href="./src/styles/addProduct/addProduct.css"/>
     <title>Adicionar produtos - AluraGeek</title>
+  
 </head>
 <body>
     <!-- <header class="header">
@@ -38,7 +39,13 @@
             </div>
             <div class="addProduct__form">
                 <label for="category">Categoria</label>
-                <input type="text" id="category"/>
+                <select name="category" id="category" >
+                    <option></option>
+                    <option value="Star-Wars">Star Wars</option>
+                    <option value="Console">Consoles</option>
+                    <option value="Diversos">Diversos</option>
+                </select>
+                <!-- <input type="text" id="category"/> -->
             </div>
             <div class="addProduct__form">
                 <label for="name">Nome do produto</label>

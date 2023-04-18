@@ -1,5 +1,5 @@
-const url = "https://json-server-git-main-maiconnunes315.vercel.app";
-
+const url = "https://json-server-orcin.vercel.app";
+// https://json-server-git-main-maiconnunes315.vercel.app
 export async function getCategories() {
     const getData = await fetch(`${url}/categories`);
     return getData.json();

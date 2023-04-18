@@ -30,7 +30,7 @@ padding: 32px;
     width: 100%;
 }
 
-.addProduct__form input{
+.addProduct__form input, select{
     background-color: #FFFFFF;
     border: none;
     outline: none;
