@@ -1,10 +1,10 @@
-.products__sectionEdit{
+.products__sectionEdit {
     background-color: #E5E5E5;
     min-height: 50vh;
-    
+
 }
 
-.products__container{
+.products__container {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -13,19 +13,19 @@
     max-width: 1136px;
 }
 
-.products__top{
-display: flex;
-flex-direction: column;
-gap: 16px;
+.products__top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.products__top h3{
+.products__top h3 {
     font-weight: 700;
     font-size: 22px;
     color: #464646;
 }
 
-.products__top a{
+.products__top a {
     width: 151px;
     text-decoration: none;
     text-align: center;
@@ -36,69 +36,70 @@ gap: 16px;
     font-size: 14px;
 }
 
-.products__section{
+.products__section {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
 }
 
-.products__section .product{
+.products__section .product {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 140px;    
+    width: 140px;
 }
 
-.products__section .product img{
+.products__section .product img {
     max-width: 176px;
 }
 
-.product__icon{
+.product__icon {
     display: flex;
     flex-direction: column;
     position: relative;
 }
 
-.icon__container{
+.icon__container {
     position: absolute;
     top: 8px;
     right: 8px;
     display: flex;
     gap: 16px;
-    
+
 }
 
-.icon1, .icon2{
-   height: 18px;
-   width: 14px;
-   border: none;
-   background-repeat: no-repeat;
-   background-size: contain;
-   background-color: transparent;
-   cursor: pointer;
+.icon1,
+.icon2 {
+    height: 18px;
+    width: 14px;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    cursor: pointer;
 }
 
-.icon1{
+.icon1 {
     background-image: url("../../images/excluir.png");
 }
 
-.icon2{
+.icon2 {
     background-image: url("../../images/editar.png");
 }
 
-.products__section h3{
+.products__section h3 {
     font-size: 14px;
     color: #464646;
     font-weight: 500;
 }
 
-.products__section .price{
+.products__section .price {
     font-weight: 700;
     color: #464646;
 }
 
 @media screen and (min-width:768px) {
-    .products__top{
+    .products__top {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -106,7 +107,7 @@ gap: 16px;
 }
 
 @media screen and (min-width:1440px) {
-    .products__top h3{
+    .products__top h3 {
         font-size: 32px;
     }
 }

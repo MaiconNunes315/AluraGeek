@@ -35,12 +35,15 @@ export function header() {
     if (location.pathname.includes("addProduct")) {
         button.innerText = "Menu administrador"
         button.setAttribute("href", "products.html");
-    }else if (location.pathname == "/index.html") {
+    }
+    else if (location.pathname.includes("login")) {
+        button.style.display = "none"
+
+    } else if (location.pathname.includes("")) {
         button.innerText = "Login"
         button.setAttribute("href", "login.html");
-    } else {
-        button.style.display = "none"
     }
+    
     button.classList.add("header__button")
     header.appendChild(button);
 
@@ -49,11 +52,11 @@ export function header() {
 }
 
 function login() {
-    if (location.pathname == "/addProduct.html") {
+    if (location.pathname.includes("addProduct")) {
         return "Menu administrador"
-    }else if (location.pathname == "/index.html") {
+    }else if (location.pathname.includes("")) {
     return "Login"
-    } else {
+    } else if (location.pathname.includes("login")) {
         const link = document.querySelector(".header__button")
         link.style.display = "none"
         return
