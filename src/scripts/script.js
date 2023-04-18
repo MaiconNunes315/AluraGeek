@@ -6,8 +6,10 @@ import { sectionComponent } from "./components/main.js";
 import { cardProductComponent } from "./components/main.js";
 import { productController } from "./controller/controller.js";
 import { login } from "./controller/login.js";
+import { db } from "./db.js";
 import { handleInputSearch } from "./handleInputSearch.js";
 import { getCategories, getProduct } from "./services/service.js";
+import { users } from "./users.js";
 
 
 const pathnameString = "/index.html" || "/AluraGeek/index.html" || "/AluraGeek/ " || "/"
@@ -23,14 +25,15 @@ if (location.pathname == "/" || location.pathname == "" || location.pathname.inc
     const main = document.querySelector("main");
     //recebendo os valores das categorias dos produtos e declarando em uma variável
     // const categories = await getCategories();
-    const categories = getCategories();
+
+    getCategories().then(res => res.forEach(section => {
+        main.appendChild(sectionComponent(section));
+    }))
+
+
+
 
     //separando as categorias atravéns dos nomes recebidos pelo json-server, e colocando em seus devidos lugares através dos parâmetros
-
-    categories.forEach(section => {
-        main.appendChild(sectionComponent(section));
-
-    })
 
     // const products = {
     //     star: getProduct("Star Wars"),
@@ -38,16 +41,23 @@ if (location.pathname == "/" || location.pathname == "" || location.pathname.inc
     //     divers: getProduct("Diversos")
     // }     
 
-    const sectionProduct = document.querySelectorAll(".products");
-
-    getProduct()["Star-Wars"].map(card => {
-        cardProductComponent(sectionProduct[0].lastChild, card.img, card.name, card.price)
+    getProduct().then(res =>
+        res["Star-Wars"].map(card => {
+            const sectionProduct = document.querySelectorAll(".products");
+            cardProductComponent(sectionProduct[0].lastChild, card.img, card.name, card.price)
+        })
+    )
+    getProduct().then(res => {
+        res["Console"].map(card => {
+            const sectionProduct = document.querySelectorAll(".products");
+            cardProductComponent(sectionProduct[1].lastChild, card.img, card.name, card.price)
+        })
     })
-    getProduct()["Console"].map(card => {
-        cardProductComponent(sectionProduct[1].lastChild, card.img, card.name, card.price)
-    })
-    getProduct()["Diversos"].map(card => {
-        cardProductComponent(sectionProduct[2].lastChild, card.img, card.name, card.price)
+    getProduct().then(res => {
+        res["Diversos"].map(card => {
+            const sectionProduct = document.querySelectorAll(".products");
+            cardProductComponent(sectionProduct[2].lastChild, card.img, card.name, card.price)
+        })
     })
 
     // products.star.map(card => {
