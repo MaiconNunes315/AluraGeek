@@ -41,20 +41,20 @@ if (location.pathname == "/" || location.pathname == "" || location.pathname.inc
     //     divers: getProduct("Diversos")
     // }     
 
-    getProduct().then(res =>
-        res["Star-Wars"].map(card => {
+    getProduct("Star Wars").then(res =>
+        res.map(card => {
             const sectionProduct = document.querySelectorAll(".products");
             cardProductComponent(sectionProduct[0].lastChild, card.img, card.name, card.price)
         })
     )
-    getProduct().then(res => {
-        res["Console"].map(card => {
+    getProduct("Console").then(res => {
+        res.map(card => {
             const sectionProduct = document.querySelectorAll(".products");
             cardProductComponent(sectionProduct[1].lastChild, card.img, card.name, card.price)
         })
     })
-    getProduct().then(res => {
-        res["Diversos"].map(card => {
+    getProduct("Diversos").then(res => {
+        res.map(card => {
             const sectionProduct = document.querySelectorAll(".products");
             cardProductComponent(sectionProduct[2].lastChild, card.img, card.name, card.price)
         })

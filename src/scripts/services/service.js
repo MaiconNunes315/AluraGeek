@@ -1,23 +1,21 @@
 const url = "https://json-server-orcin.vercel.app";
 import { db } from "../db.js"
-// export async function getCategories() {
-//     const getData = await fetch(`${url}/categories`);
-//     return getData.json();
-// }
+
+export async function getCategories() {
+    const getData = await fetch(`${url}/categories`);
+    return getData.json();
+}
 
 
-// export async function getProduct(category) {
+export async function getProduct(category) {
 
-//     if (category.includes(" ")) {
-//         category = category.replace(" ", "-")
-//     }
+    if (category.includes(" ")) {
+        category = category.replace(" ", "-")
+    }
 
-//     const getData = await fetch(`${url}/${category}`);
-
-
-
-//     return getData.json()
-// }
+    const getData = await fetch(`${url}/${category}`);
+    return getData.json()
+}
 
 // export async function postProduct(product) {
 //         try {
@@ -37,18 +35,18 @@ import { db } from "../db.js"
 // }
 
 
-export async function getCategories() {
-    const getData = await db
-    return getData.categories;
-}
+// export async function getCategories() {
+//     const getData = await db
+//     return getData.categories;
+// }
 
 
-export async function getProduct() {
+// export async function getProduct() {
 
-    const getData = await db
+//     const getData = await db
 
-    return getData
-}
+//     return getData
+// }
 
 export async function postProduct(product) {
     try {
