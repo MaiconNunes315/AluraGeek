@@ -32,7 +32,7 @@ export function header() {
 
     const button = document.createElement("a");
     
-    if (location.pathname == "/addProduct.html") {
+    if (location.pathname.includes("addProduct")) {
         button.innerText = "Menu administrador"
         button.setAttribute("href", "products.html");
     }else if (location.pathname == "/index.html") {

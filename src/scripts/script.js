@@ -9,12 +9,15 @@ import { getCategories, getProduct } from "./services/service.js";
 
 
 (async () => {
+
+    const pathnameString = "/index.html" || "/AluraGeek/index.html" || "/AluraGeek/ " || "/"
     //será renderizado apenas no arquivo index
-    if (location.pathname === "/index.html" || location.pathname === "AluraGeek/index.html" ) {
+    
         //buscando a tag html principal da pagina
         const main = document.querySelector("main");
-        //recebendo os valores das categorias dos produtos e declarando em uma variável 
-        const categories = await getCategories();
+        //recebendo os valores das categorias dos produtos e declarando em uma variável
+        // const categories = await getCategories();
+        const categories = getCategories();
         
         //separando as categorias atravéns dos nomes recebidos pelo json-server, e colocando em seus devidos lugares através dos parâmetros
 
@@ -55,13 +58,12 @@ import { getCategories, getProduct } from "./services/service.js";
         //     cardProductComponent(sectionProduct[2].lastChild, card.img, card.name, card.price)
         // })
         
-    }
 
     const body = document.querySelector("body");
     body.insertBefore(header(), document.querySelector("section"))
     body.appendChild(footer());
 
-    if (location.pathname == "/addProduct.html") {
+    if (location.pathname.includes("addProduct")) {
         productController()
     }
 
