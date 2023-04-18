@@ -26,51 +26,64 @@ if (location.pathname == "/" || location.pathname == "" || location.pathname.inc
     //recebendo os valores das categorias dos produtos e declarando em uma variável
     // const categories = await getCategories();
 
-    getCategories().then(res => res.forEach(section => {
-        main.appendChild(sectionComponent(section));
-    }))
-
-
 
 
     //separando as categorias atravéns dos nomes recebidos pelo json-server, e colocando em seus devidos lugares através dos parâmetros
+    (async () => {
+        const categories = await getCategories();
+        categories.forEach(section => {
+            main.appendChild(sectionComponent(section));
+        })
 
-    // const products = {
-    //     star: getProduct("Star Wars"),
-    //     consoles: getProduct("Console"),
-    //     divers: getProduct("Diversos")
-    // }     
+        const products = {
+            star: await getProduct("Star Wars"),
+            consoles: await getProduct("Console"),
+            divers: await getProduct("Diversos")
+        }
 
-    getProduct("Star Wars").then(res =>
-        res.map(card => {
-            const sectionProduct = document.querySelectorAll(".products");
+        const sectionProduct = document.querySelectorAll(".products");
+
+        products.star.map(card => {
             cardProductComponent(sectionProduct[0].lastChild, card.img, card.name, card.price)
         })
-    )
-    getProduct("Console").then(res => {
-        res.map(card => {
-            const sectionProduct = document.querySelectorAll(".products");
+        products.consoles.map(card => {
             cardProductComponent(sectionProduct[1].lastChild, card.img, card.name, card.price)
         })
-    })
-    getProduct("Diversos").then(res => {
-        res.map(card => {
-            const sectionProduct = document.querySelectorAll(".products");
+
+        products.divers.map(card => {
             cardProductComponent(sectionProduct[2].lastChild, card.img, card.name, card.price)
         })
-    })
+    })()
 
-    // products.star.map(card => {
-    //     cardProductComponent(sectionProduct[0].lastChild, card.img, card.name, card.price)
-    // })
 
-    // products.consoles.map(card => {
-    //     cardProductComponent(sectionProduct[1].lastChild, card.img, card.name, card.price)
-    // })
 
-    // products.divers.map(card => {
-    //     cardProductComponent(sectionProduct[2].lastChild, card.img, card.name, card.price)
-    // })       
+
+    // Promise.all(
+    //     getProduct("Star Wars").then(res =>
+    //         res.map(card => {
+    //             const sectionProduct = document.querySelectorAll(".products");
+    //             cardProductComponent(sectionProduct[0].lastChild, card.img, card.name, card.price)
+    //         })
+    //     ),
+    //     getProduct("Console").then(res => {
+    //         res.map(card => {
+    //             const sectionProduct = document.querySelectorAll(".products");
+    //             cardProductComponent(sectionProduct[1].lastChild, card.img, card.name, card.price)
+    //         })
+    //     }),
+    //     getProduct("Diversos").then(res => {
+    //         res.map(card => {
+    //             const sectionProduct = document.querySelectorAll(".products");
+    //             cardProductComponent(sectionProduct[2].lastChild, card.img, card.name, card.price)
+    //         })
+    //     })
+    // ).
+
+
+
+
+
+
 }
 
 if (location.pathname.includes("addProduct")) {
