@@ -1,5 +1,7 @@
+const url = "https://json-server-git-main-maiconnunes315.vercel.app";
+
 export async function getCategories() {
-    const getData = await fetch(`http://localhost:3000/categories`);
+    const getData = await fetch(`${url}/categories`);
     return getData.json();
 }
 
@@ -10,7 +12,7 @@ export async function getProduct(category) {
         category = category.replace(" ", "-")
     }
 
-    const getData = await fetch(`http://localhost:3000/${category}`);
+    const getData = await fetch(`${url}/${category}`);
 
 
 
@@ -19,7 +21,7 @@ export async function getProduct(category) {
 
 export async function postProduct(product) {
         try {
-           const post = fetch(`http://localhost:3000/${product.category}`, {
+           const post = fetch(`${url}/${product.category}`, {
              method: "POST",
             headers: {
                 "Content-Type": "application/json"

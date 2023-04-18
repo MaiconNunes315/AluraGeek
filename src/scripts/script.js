@@ -1,3 +1,4 @@
+
 import { footer } from "./components/footer.js";
 import { header } from "./components/header.js";
 import { sectionComponent } from "./components/main.js";
@@ -22,7 +23,7 @@ import { getCategories, getProduct } from "./services/service.js";
             main.appendChild(sectionComponent(section));
             
         })
-
+        
         const products = {
             star: await getProduct("Star Wars"),
             consoles: await getProduct("Console"),
@@ -44,7 +45,7 @@ import { getCategories, getProduct } from "./services/service.js";
             cardProductComponent(sectionProduct[2].lastChild, card.img, card.name, card.price)
         })
         
-        
+
         
         
         
