@@ -6,10 +6,8 @@ import { sectionComponent } from "./components/main.js";
 import { cardProductComponent } from "./components/main.js";
 import { productController } from "./controller/controller.js";
 import { login } from "./controller/login.js";
-
 import { handleInputSearch } from "./handleInputSearch.js";
 import { getCategories, getProduct } from "./services/service.js";
-import { users } from "./users.js";
 
 
 const pathnameString = "/index.html" || "/AluraGeek/index.html" || "/AluraGeek/ " || "/"
@@ -17,6 +15,7 @@ const pathnameString = "/index.html" || "/AluraGeek/index.html" || "/AluraGeek/ 
 const body = document.querySelector("body");
 body.insertBefore(header(), document.querySelector("section"))
 body.appendChild(footer());
+
 
 if (location.pathname == "/" || location.pathname == "" || location.pathname.includes("index")) {
 
